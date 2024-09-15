@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8f4;
+    /* Light greenish background */
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background: #009688;
+    /* Teal color */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+header.scrolled {
+    background: #00796b;
+    /* Darker teal */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a5d6a7;
+    /* Light green */
+}
+
+/* Main Content Styles */
+main {
+    margin-top: 80px;
+    padding: 20px;
+    padding-bottom: 80px;
+    /* Added bottom padding to ensure content doesn't get covered */
+}
+
+section {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Centered Heading Style */
+section#home h2 {
+    margin: 0;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+/* Centered Section Styles */
+section#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    /* Adjust height as needed */
+}
+
+section:nth-of-type(odd) {
+    background: #e8f5e9;
+    /* Light green */
+}
+
+section#contact {
+    background: #c8e6c9;
+    /* Lighter green */
+    margin-bottom: 80px;
+    /* Added margin-bottom to ensure footer does not cover content */
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Spacing between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Spacing between label and input */
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #00796b;
+    /* Teal color for focus */
+    outline: none;
+    /* Removes default outline */
+}
+
+textarea {
+    resize: vertical;
+    /* Allows vertical resizing only */
+}
+
+button {
+    background-color: #00796b;
+    /* Teal color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #004d40;
+    /* Darker teal on hover */
+    transform: scale(1.05);
+}
+
+#form-response {
+    color: #333;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004d40;
+    /* Darker teal */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
